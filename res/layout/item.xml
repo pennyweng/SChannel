@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:paddingLeft="10dp"
+	android:paddingRight="10dp"
+	android:paddingTop="10dp"
+    android:background="#008C9E"
+    >
+
+    <TextView
+        android:id="@+id/ts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="06-26 14:00"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#013F47"
+        android:textSize="11sp"
+        android:text="\@123443" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/room"
+        android:layout_below="@+id/room"
+        android:layout_toLeftOf="@+id/ts"
+        android:text="Hello"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/msg"
+        android:layout_below="@+id/msg" />
+
+</RelativeLayout>

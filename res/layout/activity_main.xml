@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="${packageName}.${activityClass}" >
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl1"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rl3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:divider="#FFFFFF"
+        android:dividerHeight="20dp" >
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00B4CC"
+        android:paddingTop="10dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="2dp"
+        android:layout_above="@+id/rl2"
+        android:layout_alignParentLeft="true" >
+        
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/button1"
+            android:ems="10"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:inputType="textMultiLine" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="#00B4CC"
+            android:text="送出"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_marginBottom="20dp"        
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#00B4CC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView1"
+        android:layout_marginLeft="5dp"
+        android:background="#00B4CC"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="靜悄悄"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:layout_toRightOf="@+id/textView1" />
+
+	</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-6177946832323310/1554727326" >
+    </com.google.android.gms.ads.AdView>
+        
+    </RelativeLayout>
+    
+</RelativeLayout>
